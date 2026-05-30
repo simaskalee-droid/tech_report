@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OmniInvestigator — VLM Agentic Reasoning for Financial Anti-Fraud Investigation</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #090d14;
+    color: #bcc4d2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 56px 24px 48px;
+  }
+
+  .site-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #e2e6ed;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .site-sub {
+    font-size: 1rem;
+    color: #545d6e;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  /* ---- section ---- */
+  .section {
+    margin-bottom: 56px;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4a5366;
+    border-bottom: 1px solid #161b25;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #1a1f2b;
+    border-radius: 6px;
+  }
+
+  .section .note {
+    margin-top: 14px;
+    font-size: 0.78rem;
+    color: #545d6e;
+    line-height: 1.7;
+  }
+
+  .section .note b {
+    color: #8991a4;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.68rem;
+    color: #3c4455;
+    padding-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="site-title">OmniInvestigator</div>
+  <div class="site-sub">Agentic Risk Reasoning &middot; Financial Anti-Fraud Risk Investigation Agent</div>
+
+  <!-- ====== Flow ====== -->
+  <div class="section">
+    <div class="section-label">01&ensp;&middot;&ensp;End-to-End Risk Investigation Flow</div>
+    <img src="clip_max.gif" alt="End-to-End Flow">
+    <div class="note">
+      <b>Multimodal Input → Preprocessing → Evidence Extraction → Agentic Reasoning → Grounded Report.</b>
+      核心不是工具串联，而是 VLM 动态工具决策、证据交叉验证、知识图谱关联与风险推理。
+    </div>
+  </div>
+
+  <!-- ====== Post-Training ====== -->
+  <div class="section">
+    <div class="section-label">02&ensp;&middot;&ensp;Agentic Post-Training Practice</div>
+    <img src="1.png" alt="Post-Training">
+    <div class="note">
+      <b>Phase 1</b>&ensp;Position-Coordinate CoT + DPO → GRPO，通过模态 Grounding 约束提升 VLM 细粒度视觉感知能力。
+      <b>Phase 2</b>&ensp;OPD Distillation 将局部关键证据的感知优势蒸馏回 full-frame VLM。
+    </div>
+  </div>
+
+  <!-- ====== Self-Evolution ====== -->
+  <div class="section">
+    <div class="section-label">03&ensp;&middot;&ensp;Controlled Self-Evolution Practice</div>
+    <img src="2.png" alt="Self-Evolution">
+    <div class="note">
+      <b>规则蒸馏 → Skill 动态组合 → 冲突治理与受控上线。</b>
+      通过 Shadow Eval、灰度发布、人审兜底和版本治理实现受控迭代，非自动生成直接上线。
+    </div>
+  </div>
+
+  <footer>OmniInvestigator &middot; Technical Overview</footer>
+
+</div>
+
+</body>
+</html>
